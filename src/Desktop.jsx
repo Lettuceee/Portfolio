@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import Draggable from 'react-draggable';
+import { Draggable } from 'react-draggable';
 import { useRef } from 'react';
-import anime from 'animejs';
+import { anime } from 'animejs';
 
 import "./App.css";
 
@@ -30,6 +30,7 @@ import mouseDown2 from './sfx/mouse-down-2.mp3';
 import mouseUp2 from './sfx/mouse-up-2.mp3';
 import mouseDown3 from './sfx/mouse-down-3.mp3';
 import mouseUp3 from './sfx/mouse-up-3.mp3';
+
 
 export default function Desktop() {
 
