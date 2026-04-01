@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animejs": "^4.3.6",
     "react": "^19.1.0",
+    "react-anime": "^4.1.1",
     "react-dom": "^19.1.0",
     "react-resizable": "^3.0.5",
     "react-rnd": "^10.5.2"

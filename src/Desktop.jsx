@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Draggable } from 'react-draggable';
+import Draggable from 'react-draggable';
 import { useRef } from 'react';
-import { anime } from 'animejs';
+import { anime } from 'react-anime';
 
 import "./App.css";
 

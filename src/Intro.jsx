@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import anime from 'animejs'
+import { anime } from 'react-anime'
 
 export default class Intro extends Component {
   animation(){
