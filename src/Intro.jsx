@@ -1,78 +1,51 @@
 import { Component } from 'react'
-import { anime } from 'react-anime'
+import { animate, svg, stagger } from 'animejs'
 
-export default class Intro extends Component {
-  animation(){
-    anime({
-      targets: '.path',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'cubicBezier(.5, 0, .1, .4)',
-      duration: 600,
-      delay: (_el, i) => { return i * 50; },
-    });
-  }
+export default function Intro(){
+  animate(svg.createDrawable('.path'), {
+    draw: ['0 1'],
+    ease: 'inOutQuad',
+    duration: 600,
+    delay: (_el, i) => { return i * 50; }
+  });
 
-  animation2(){
-    anime({
-      targets: '.path2',
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: 'cubicBezier(.5, .0, .1, .4)',
-      duration: 600,
-      delay: (_el, i) => { return 300 + i * 50; },
-    });
-  }
+  animate(svg.createDrawable('.path2'), {
+    draw : ['0 1'],
+    ease: 'inOutQuad',
+    duration: 600,
+    delay: (_el, i) => { return 300 + i * 50; }
+  });
 
-    slideIn(){
-    anime({
-      targets: '.pathfill',
-      easing: 'cubicBezier(.25, .0, .15, 1)',
-      translateX: [1500, 0],
+  animate('.pathfill', {
+    x: {
+      to: '0px',
+      from: '1500px',
+      ease: 'outCubic',
       duration: 1000,
       delay: 1000,
-    });
-  }
+    },
+  });
 
-  introSlide(){
-    anime({
-      targets: '.introContainer',
-      translateY: -2000,
-      duration: 800,
-      delay: 3700,
-      easing: 'cubicBezier(.57,0,.87,.37)',
-    })
-  }
+  animate('.introContainer', {
+  y: {
+    to: '-2000px',
+    ease: 'inCubic',
+    duration: 800,
+    delay: 3700,
+  },
+});
 
-  introLaunch(){
-    anime({
-      targets: '.launching',
-      translateY: [500, 0],
-      duration: 800,
-      delay: 1800,
-      easing: 'cubicBezier(.25, .0, .15, 1)',
-      
-    })
-  }
+  animate('.launching', {
+  y: {
+    to: '0px',
+    from: '100px',
+  },
+  opacity: 1,
+  ease: 'outCubic',
+  duration: 800,
+  delay: 1800,
+});
 
-  introLaunchOpacity(){
-    anime({
-      targets: '.launching',
-      opacity: [0, 1],
-      duration: 400,
-      delay: 2200,
-      easing: 'cubicBezier(.25, .0, .15, 1)',
-    })
-  }
-
-  componentDidMount(){
-    this.animation()
-    this.animation2()
-    this.slideIn()
-    this.introSlide()
-    this.introLaunch()
-    this.introLaunchOpacity()
-  }
-
-  render() {
     return (
       <div className="introContainer">
         <svg viewBox="0 0 1783.4 423.71">
@@ -139,5 +112,4 @@ export default class Intro extends Component {
         </div>
       </div>
     )
-  }
 }
