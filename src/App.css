@@ -863,6 +863,7 @@ iframe {
 
   .crtText {
     font-size: 16px;
+    top: 17px;
   }
 
   h1 {
@@ -1013,9 +1014,9 @@ iframe {
   position: absolute;
   justify-items: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   width: 60px;
-  top: 17px;
+  top: 20px;
 }
 
 .toggleSwitch .toggleLabel {
