@@ -328,63 +328,63 @@ iframe {
   width: 100%;
 }
 .wallpaper#shapesPreview, .paperPreview#shapesPreview{
-  background-image: url(".\wallpaper\shapes-preview.jpg");
+  background-image: url("./wallpaper/shapes-preview.jpg");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#hudPreview, .paperPreview#hudPreview{
-  background-image: url(".\wallpaper\hud-preview.jpg");
+  background-image: url("./wallpaper/hud-preview.jpg");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#portholePreview, .paperPreview#portholePreview{
-  background-image: url(".\wallpaper\porthole-preview.png");
+  background-image: url("./wallpaper/porthole-preview.png");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#sunset, .paperPreview#sunset{
-  background-image: url(".\wallpaper\sunset.jpeg");
+  background-image: url("./wallpaper/sunset.jpeg");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#underpass, .paperPreview#underpass{
-  background-image: url(".\wallpaper\underpass.jpg");
+  background-image: url("./wallpaper/underpass.jpg");
   background-size: cover;
   background-position-y: 50%;
 }
 .wallpaper#enjp5, .paperPreview#enjp5{
-  background-image: url(".\wallpaper\enjp5.png");
+  background-image: url("./wallpaper/enjp5.png");
   background-size: cover;
   background-position-y: 60%;
 }
 .wallpaper#pigeons, .paperPreview#pigeons{
-  background-image: url(".\wallpaper\pigeons.jpg");
+  background-image: url("./wallpaper/pigeons.jpg");
   background-size: cover;
   background-position-y: 50%;
 }
 .wallpaper#dogs, .paperPreview#dogs{
-  background-image: url(".\wallpaper\malarkey-ollie.jpg");
+  background-image: url("./wallpaper/malarkey-ollie.jpg");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#vrchat1, .paperPreview#vrchat1{
-  background-image: url(".\wallpaper\vrchat-1.png");
+  background-image: url("./wallpaper/vrchat-1.png");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#vrchat2, .paperPreview#vrchat2{
-  background-image: url(".\wallpaper\vrchat-2.png");
+  background-image: url("./wallpaper/vrchat-2.png");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#img8461, .paperPreview#img8461{
-  background-image: url(".\wallpaper\IMG_8461.jpg");
+  background-image: url("./wallpaper/IMG_8461.jpg");
   background-size: cover;
   background-position-y: 40%;
   background-position-x: 50%;
 }
 .wallpaper#burki, .paperPreview#burki{
-  background-image: url(".\wallpaper\burki-art.png");
+  background-image: url("./wallpaper/burki-art.png");
   background-size: cover;
   background-position-x: 100%;
 }
