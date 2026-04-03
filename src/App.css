@@ -368,12 +368,12 @@ iframe {
   background-position-x: 50%;
 }
 .wallpaper#vrchat1, .paperPreview#vrchat1{
-  background-image: url("./wallpaper/vrchat-1.png");
+  background-image: url("./wallpaper/vrchat-1.jpg");
   background-size: cover;
   background-position-x: 50%;
 }
 .wallpaper#vrchat2, .paperPreview#vrchat2{
-  background-image: url("./wallpaper/vrchat-2.png");
+  background-image: url("./wallpaper/vrchat-2.jpg");
   background-size: cover;
   background-position-x: 50%;
 }
