@@ -62,10 +62,10 @@ export default function HuschBlackwell ({
                                 brand should be perceived.</p>}
                             {jp && <p className="jpFont">ハッシュ・ブラックウェルは全国的な企業と訴訟事務所で、異常な人々に大切する考え方を自慢しています。価値、アイデンティティや商品などで
                                 ハッシュ・ブラックウェルは目立って、法律事務所のブランドがどう認識されるべきかを広げるのを恐れません。</p>}
-                            <div style={{paddingBottom: '5%'}}>
-                                <iframe src="https://player.vimeo.com/video/1081372409?h=fe891b79f7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" style={{width: '100%', height: '8vw', overflow: 'hidden'}} title="2023 Gallup Survey Final"></iframe>
+                            <div className="containerVideo">
+                                <iframe src="https://player.vimeo.com/video/1081372409?h=fe891b79f7&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin" style={{display: 'block', width: '100%'}} title="2023 Gallup Survey Final"></iframe>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer" style={{width: '100%'}}>
                                     <img src={HBGallup} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -74,7 +74,7 @@ export default function HuschBlackwell ({
                                     }}/>
                                 </div>
                             </div>
-                             <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                             <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HBPopupHoodie} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -90,7 +90,7 @@ export default function HuschBlackwell ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HBMoveCrew} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -106,7 +106,7 @@ export default function HuschBlackwell ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HBKC} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)

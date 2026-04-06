@@ -61,7 +61,7 @@ export default function Pinnacle ({
                             </p>}
                             {jp && <p className="jpFont">隔年、アメリカのインテリアデザインの教会のASIDの東ミズーリ州チャプターは授賞式のピナクル・アワードをして、インテリアデザインのすごいイ
                                 ノベーションを祝います。2023年のピナクル・アワードのブランドを生じるためにASIDと協力するのが本当にありがたいでした。</p>}
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer" style={{width: '100%', height: '400px', backgroundColor: '#275099'}}>
                                     <img src={PinnacleGIF} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -70,7 +70,7 @@ export default function Pinnacle ({
                                     }}/>
                                 </div>
                             </div>
-                             <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                             <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={PinnacleLogo} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -86,7 +86,7 @@ export default function Pinnacle ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={PinnacleBrochure1} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -102,7 +102,7 @@ export default function Pinnacle ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={PinnaclePages} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)

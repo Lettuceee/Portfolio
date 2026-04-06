@@ -51,14 +51,14 @@ export default function ConnectTransit ({
                                     }}/>
                                 </div>
                             </div>
-                            <div style={{backgroundColor: '#000000', marginBottom: '1%', paddingBottom: '1px'}}>
-                                <iframe src="https://player.vimeo.com/video/966915032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            <div className="containerVideo">
+                                <iframe src="https://player.vimeo.com/video/966915032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
-                            <div style={{backgroundColor: '#000000', marginBottom: '1%', paddingBottom: '1px'}}>
-                                <iframe src="https://player.vimeo.com/video/966914904?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            <div className="containerVideo">
+                                <iframe src="https://player.vimeo.com/video/966914904?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
-                            <div style={{backgroundColor: '#000000', marginBottom: '1%', paddingBottom: '1px'}}>
-                                <iframe src="https://player.vimeo.com/video/966914988?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            <div className="containerVideo">
+                                <iframe src="https://player.vimeo.com/video/966914988?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
                         </div>
                     </div>

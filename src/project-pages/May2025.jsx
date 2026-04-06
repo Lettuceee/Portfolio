@@ -160,7 +160,7 @@ export default function May2025 ({
                                 printed media. Why stop at posters?
                             </p>}
                             {jp && <p className="jpFont">別の印刷メディアでどう見えるかを見たかった。なんでポスターだけ？</p>}
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={Shirt1} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)

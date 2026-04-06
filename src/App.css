@@ -34,6 +34,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'IBMPlexSansJP';
+    src: url('./fonts/IBMPlexSansJP-Regular.woff2') format('woff2'),
+        url('./fonts/IBMPlexSansJP-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @keyframes animate {
     0%{
         transform: translateY(0) rotate(0deg);
@@ -180,11 +189,12 @@ a, a:hover, a:focus, a:active {
   left: 0;
   right: 0;
   color: #ffffff;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'IBMPlexSansJP', sans-serif;
 }
 
 h1 {
   font-size: 24pt;
+  margin-block-end: 20px;
 }
 
 
@@ -320,6 +330,7 @@ iframe {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: none;
 
 }
 .wallpaper {
@@ -470,8 +481,6 @@ iframe {
   top: -8px;
 }
 
-
-
 .retro .close {
   width: 32px;
   height: 29px;
@@ -536,11 +545,18 @@ iframe {
   width: 15px;
 }
 
-
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+.containerVideo {
+  background-color: black;
+  margin-bottom: 2%;
+}
+
+.containerFlex {
+  padding-bottom: 2%;
+}
 
 .light, .paperPreview#light {
   background-color: #ffffff;
@@ -863,7 +879,7 @@ iframe {
 
   .crtText {
     font-size: 16px;
-    top: 17px;
+    top: 30px;
   }
 
   h1 {
@@ -941,7 +957,7 @@ iframe {
 .icon {
   font-size: 14px;
   padding-bottom: 20px;
-  width: 80px;
+  width: 100px;
   padding-right: 20px;
   cursor: default;
 }
@@ -952,23 +968,26 @@ iframe {
 
 .iconImg {
   height: 80px;
-  width: 80px;
+  width: 100%;
   background-size: contain;
   filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.15));
 }
 
 #projects, #info, #project, #extras {
   .icon {
-    width: 120px;
+    width: 140px;
     text-align: center;
     padding-bottom: 30px;
   }
   .iconImg {
     height: 120px;
-    width: 120px;
+    width: 100%;
   }
   .windowContent {
     overflow-y: auto;
+    p {
+      margin-block-end: 20px;
+    }
   }
   .projectsContainer {
     padding: 15px 30px 60px 30px;
@@ -1016,7 +1035,7 @@ iframe {
   align-items: center;
   font-size: 12px;
   width: 60px;
-  top: 20px;
+  top: 33px;
 }
 
 .toggleSwitch .toggleLabel {
@@ -1046,6 +1065,10 @@ iframe {
 
 .toggleSwitch .toggleInput:checked + .toggleLabel::before {
   transform: translateX(-30px);
+}
+
+.toggleInput {
+  display: none;
 }
 
 .infoContainer, .projectContainer {
@@ -1162,10 +1185,11 @@ transform: translate(-50%, -50%);
 
 .infoContainer .container4col {
   div{
-    height: 6vh;
+    height: 80px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: 50%;
-    background-position-y: 50%;
+    background-position-y: 0%;
+    margin-bottom: 20px;
   }
 }

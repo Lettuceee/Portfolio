@@ -66,7 +66,7 @@ export default function Banner ({
                             {jp && <p className="jpFont">2022年では、カークウッド市はカラフルな目を引けるバナーで地元の建設地を飾るのを目指してます。
                                 このバナーは音楽の愛、複数公園や鉄道の歴史などカークウッドの本質を捉える。</p>}
 
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={Banner1} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -75,7 +75,7 @@ export default function Banner ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={Banner2} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -84,7 +84,7 @@ export default function Banner ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={Banner3} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -93,7 +93,7 @@ export default function Banner ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={Banner4} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -102,7 +102,7 @@ export default function Banner ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={BannerPhoto1} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -118,7 +118,7 @@ export default function Banner ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '5%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={BannerPhoto3} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)

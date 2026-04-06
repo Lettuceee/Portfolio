@@ -61,7 +61,7 @@ export default function Hager175 ({
                                 {en && <h1>Hager Companies 175th</h1>}
                                 {jp && <h1 className="jpFontHeader">ハーガー・カンパニーズ 175周年</h1>}
                             </div>
-                            <div className="videoContainer">
+                            <div className="containerVideo">
                                 <iframe src="https://player.vimeo.com/video/1021838016?autoplay=1&amp;loop=1&amp;h=049cd3041e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1" allow="autoplay; picture-in-picture" className="embed-content" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
                             {en && <div>
@@ -78,10 +78,10 @@ export default function Hager175 ({
                                 <p>大切なイベントを祝うために、ハーガーコンパニーズが過去の成功だけじゃなく、楽観的な未来を表すグラフィックアイデンティティを願望しました。</p>
                             </div>}
 
-                            <div style={{backgroundColor: '#000000', marginBottom: '1%', paddingBottom: '1px'}}>
-                                <iframe src="https://player.vimeo.com/video/1021845479?h=3167cdfc5e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" className="embed-content" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            <div className="containerVideo">
+                                <iframe src="https://player.vimeo.com/video/1021845479?h=3167cdfc5e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" className="embed-content" style={{display: 'block', width: '100%'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HagerTimeline} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -90,7 +90,7 @@ export default function Hager175 ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HagerBooth1} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -106,7 +106,7 @@ export default function Hager175 ({
                                     }}/>
                                 </div>
                             </div>
-                             <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                             <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HagerLetterhead} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -122,7 +122,7 @@ export default function Hager175 ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HagerCap} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -138,7 +138,7 @@ export default function Hager175 ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '5%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={HagerSocial} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)

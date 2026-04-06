@@ -352,7 +352,6 @@ export default function Desktop() {
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li></li>
                     </ul>
                 <div className="icons">
                     <Rnd bounds="body" enableResizing="false"

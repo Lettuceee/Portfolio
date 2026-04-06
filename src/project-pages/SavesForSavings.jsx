@@ -44,10 +44,10 @@ export default function SavesForSavings ({
                                 子供や学生が金融や予算の重要性を学ぶのを手伝います。
                                 CITY SCがなんでもセーブをすると、トゥゲザー・クレジット・ユニオンは地元の学生のために$300口座を開きます。</p>}
 
-                            <div className="videoContainer">
+                            <div className="containerVideo">
                                 <iframe src="https://player.vimeo.com/video/1081371685?h=aade7a3119&amp;autoplay=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style={{height: '5vw'}} referrerPolicy="strict-origin-when-cross-origin" title="Saves for Savings 1800x90"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={BurkiArt} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -56,10 +56,10 @@ export default function SavesForSavings ({
                                     }}/>
                                 </div>
                             </div>
-                            {en && <p style={{paddingBottom: '5%'}}>DISCLAIMER: Background art was a personal addition not part of the official project.</p>}
-                            {jp && <p className="jpFont" style={{paddingBottom: '5%'}}>お知らせ：背景アートは個人的な追加で正式プロジェクトの部分ではない。</p>}
-                            <div style={{paddingBottom: '5%'}}>
-                                <iframe src="https://player.vimeo.com/video/1081371730?h=80b590ff39&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style={{display: 'block', width: '100%', height: '8vw'}} referrerPolicy="strict-origin-when-cross-origin" title="Saves for Savings Test"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+                            {en && <p style={{paddingBottom: '5%', textAlign: 'center'}}>DISCLAIMER: Background art was a personal addition not part of the official project.</p>}
+                            {jp && <p className="jpFont" style={{paddingBottom: '5%', textAlign: 'center'}}>お知らせ：背景アートは個人的な追加で正式プロジェクトの部分ではない。</p>}
+                            <div className="containerVideo">
+                                <iframe src="https://player.vimeo.com/video/1081371730?h=80b590ff39&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style={{display: 'block', width: '100%'}} referrerPolicy="strict-origin-when-cross-origin" title="Saves for Savings Test"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
                             </div>
                         </div>
                     </div>

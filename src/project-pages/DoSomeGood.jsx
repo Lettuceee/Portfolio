@@ -50,10 +50,10 @@ export default function DoSomeGood ({
                             {jp && <p className="jpFont">2001年に設立されたシェイクスピア祭りは毎夏フォレストパークで無料なショーを与えだけじゃなく
                                 市街地の周りに近所の道にも舞台を行っています。さらに、コンフルエンス・ライターズ・プロジェクトは新興の劇作者に脚本をコミッションし
                                 国内上越になる機会をあげる。</p>}
-                            <div style={{backgroundColor: '#000000', marginBottom: '1%', paddingBottom: '1px'}}>
-                                <iframe src="https://player.vimeo.com/video/1060670195?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            <div className="containerVideo">
+                                <iframe src="https://player.vimeo.com/video/1060670195?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={DSGTitle} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -62,7 +62,7 @@ export default function DoSomeGood ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '5%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={DSGCallout} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)

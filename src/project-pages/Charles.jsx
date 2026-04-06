@@ -36,8 +36,8 @@ export default function Charles ({
                                 reach and maintain their weight loss goals — no shots, pills or gimmicks.</p>}
                             {jp && <p className="jpFont">チャールズ・デ・アンジェロは、国家的な体重減少とマインドの成長のコードです。どうやって瘦せるだけじゃなく、やせた体重を保つことを
                                 教えます。注射、薬、ギミックなし、医者や上院議員など、チャールズが無数人を助けました。</p>}
-                            <div style={{backgroundColor: '#000000', marginBottom: '1%', paddingBottom: '1px'}}>
-                                <iframe src="https://player.vimeo.com/video/1175992997?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            <div className="containerVideo" >
+                                <iframe src="https://player.vimeo.com/video/1175992997?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
                         </div>
                     </div>

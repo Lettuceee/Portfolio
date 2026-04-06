@@ -63,10 +63,10 @@ export default function RideFinders ({
                                 save money on gas, reduce overall traffic, and contribute to a cleaner environment!</p>}
                             {jp && <p className="jpFont">ライドファインダーズは、マディソン郡に営まれてセントルイス市を提供しているライドシェアサービスです。
                                 安全で信頼できる通勤手段を設け、ライドファインダーズはガス代を省くこと、交通を減らすこと、清浄な環境を支えることで企業とスタッフを手伝う！</p>}
-                            <div style={{backgroundColor: '#000000', marginBottom: '1%', paddingBottom: '1px'}}>
-                            <iframe src="https://player.vimeo.com/video/856874230?h=d12fc6e339&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%', height: '8vw'}} className="embed-content" sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                            <div className="containerVideo">
+                            <iframe src="https://player.vimeo.com/video/856874230?h=d12fc6e339&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; picture-in-picture" style={{display: 'block', width: '100%'}} className="embed-content" sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={RFBill1} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -75,7 +75,7 @@ export default function RideFinders ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={RFBill2} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -91,7 +91,7 @@ export default function RideFinders ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={RFSocial} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -107,7 +107,7 @@ export default function RideFinders ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '5%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={RFPost1} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)

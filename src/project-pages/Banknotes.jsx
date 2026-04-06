@@ -64,7 +64,7 @@ export default function Banknotes ({
                                 <p>それぞれの札は、別の教皇とその教皇に依頼された芸術品や建物が出します。そして、本格的なストリップとアクセシビリティ
                                     機能も入ってあります。</p>
                             </div>}
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={BanknotesLineup} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
@@ -80,7 +80,7 @@ export default function Banknotes ({
                                     }}/>
                                 </div>
                             </div>
-                            <div className="containerFlex" style={{paddingBottom: '1%'}}>
+                            <div className="containerFlex">
                                 <div className="imgContainer">
                                     <img src={Banknotes10} onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
