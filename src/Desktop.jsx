@@ -111,33 +111,24 @@ export default function Desktop() {
             delay: (_el, i) => { return i * 50; }
           });
         
-          animate(svg.createDrawable('.path2'), {
-            draw : ['0 1'],
-            ease: 'inOutQuad',
-            duration: 600,
-            delay: (_el, i) => { return 300 + i * 50; }
-          });
-        
-          animate('.pathfill', {
-            x: {
-              to: '0px',
-              from: '1500px',
-              ease: 'outCubic',
-              duration: 1000,
-              delay: 1000,
-            },
-          });
-        
-          animate('.introContainer', {
-          y: {
-            to: '-2000px',
-            ease: 'inCubic',
-            duration: 800,
-            delay: 3700,
-          },
+        animate(svg.createDrawable('.path2'), {
+        draw : ['0 1'],
+        ease: 'inOutQuad',
+        duration: 600,
+        delay: (_el, i) => { return 300 + i * 50; }
         });
         
-          animate('.launching', {
+        animate('.pathfill', {
+            x: {
+                to: '0px',
+                from: '1500px',
+                ease: 'outCubic',
+                duration: 1000,
+                delay: 1000,
+            },
+        });
+
+        animate('.launching', {
           y: {
             to: '0px',
             from: '100px',
@@ -147,18 +138,16 @@ export default function Desktop() {
           duration: 800,
           delay: 1800,
         });
-    }
+        
+        animate('.introContainer', {
+          y: {
+            to: '-2000px',
+            ease: 'inCubic',
+            duration: 800,
+            delay: 3700,
+          },
+        });
 
-    function animeLogo() {
-        animate('#bgLogo', {
-            opacity: 1,
-            duration: 1000,
-            delay: 4700,
-            ease: 'outCubic',
-        })
-    };
-    
-    function animeIcon() {
         animate('#desktopIcon', {
             x: {
                to: '0px',
@@ -168,9 +157,7 @@ export default function Desktop() {
                delay: (_el, i) => { return 4300 + i * 50; },
             },
         })
-    };
 
-    function animeMode() {
         animate('.modeButton, .toggleSwitch', {
             x: {
                to: '0px',
@@ -180,9 +167,14 @@ export default function Desktop() {
                delay: (_el, i) => { return 4450 + i * 50; },
             },
         })
-    };
 
-    function animeTaskbar() {
+        animate('#bgLogo', {
+            opacity: 1,
+            duration: 1000,
+            delay: 4700,
+            ease: 'outCubic',
+        })
+
         animate('#taskbar', {
             y: {
                to: '0px',
@@ -197,10 +189,6 @@ export default function Desktop() {
     useEffect(() => {
 
         animeIntro();
-        animeIcon();
-        animeTaskbar();
-        animeMode();
-        animeLogo();
 
         setInterval(() => {
 

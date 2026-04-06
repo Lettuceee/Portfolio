@@ -879,7 +879,7 @@ iframe {
 
   .crtText {
     font-size: 16px;
-    top: 30px;
+    text-align: center;
   }
 
   h1 {
@@ -1031,11 +1031,13 @@ iframe {
 .crtText {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1), 1px 1px 5px rgba(0, 0, 0, 1), 1px 1px 7px rgba(0, 0, 0, 1);
   position: absolute;
-  justify-items: center;
-  align-items: center;
   font-size: 12px;
   width: 60px;
   top: 33px;
+}
+
+.toggleSwitch {
+  text-align: center;
 }
 
 .toggleSwitch .toggleLabel {
@@ -1080,6 +1082,8 @@ iframe {
 }
 
 #modes {
+  height: 100%;
+  text-align: center;
   position: absolute;
   top: 40px;
   right: 20px;
