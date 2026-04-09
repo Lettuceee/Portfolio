@@ -377,6 +377,7 @@ iframe {
   background-image: url("./wallpaper/malarkey-ollie.jpg");
   background-size: cover;
   background-position-x: 50%;
+  background-position-y: 50%;
 }
 .wallpaper#vrchat1, .paperPreview#vrchat1{
   background-image: url("./wallpaper/vrchat-1.jpg");
@@ -943,15 +944,12 @@ iframe {
 
 .icons {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 1), 1px 1px 5px rgba(0, 0, 0, 1), 1px 1px 7px rgba(0, 0, 0, 1);
-  top: 20px;
-  left: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   position: fixed;
   height: calc(100% - 50px);
   flex-wrap: wrap;
-
 }
 
 .icon {
@@ -1085,7 +1083,7 @@ iframe {
   height: 100%;
   text-align: center;
   position: absolute;
-  top: 40px;
+  top: 20px;
   right: 20px;
   width: 60px;
   #modeButtons {

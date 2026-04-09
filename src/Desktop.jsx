@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Rnd } from 'react-rnd';
 import { useRef } from 'react';
 import { animate, svg } from 'animejs';
+import Draggable from 'react-draggable';
 
 import "./App.css";
 
@@ -148,7 +149,7 @@ export default function Desktop() {
           },
         });
 
-        animate('#desktopIcon', {
+        animate('.iconImgText', {
             x: {
                to: '0px',
                from: '-200px',
@@ -342,8 +343,7 @@ export default function Desktop() {
                     <li></li>
                     </ul>
                 <div className="icons">
-                    <Rnd bounds="body" enableResizing="false"
-                    default={{x: 0, y: 0}} nodeRef={nodeRefIcon1}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon1}>
                         <div ref={nodeRefIcon1} className="icon" id="desktopIcon" onDoubleClick={() => {
                             setIndexCount((prevValue) => prevValue + 1)
                             setInfoIndex(indexCount)
@@ -355,9 +355,8 @@ export default function Desktop() {
                                 {jp && <div className="jpFont">情報・連絡</div>}
                             </div>
                         </div>
-                    </Rnd>
-                    <Rnd bounds="body" enableResizing="false"
-                    default={{x: 0, y: 120}} nodeRef={nodeRefIcon2}>
+                    </Draggable>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon2}>
                         <div ref={nodeRefIcon2} className="icon" id="desktopIcon" onDoubleClick={() => {
                             setIndexCount((prevValue) => prevValue + 1)
                             setProjectsIndex(indexCount)
@@ -369,9 +368,8 @@ export default function Desktop() {
                                 {jp && <div className="jpFont">プロジェクト</div>}
                             </div>
                         </div>
-                    </Rnd>
-                    <Rnd bounds="body" enableResizing="false"
-                    default={{x: 0, y: 0}} nodeRef={nodeRefIcon3}>
+                    </Draggable>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon3}>
                         <div ref={nodeRefIcon3} className="icon" id="desktopIcon" style={{display: 'none'}}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconMusic})`}}></div>
@@ -379,9 +377,8 @@ export default function Desktop() {
                                 {jp && <div className="jpFont">音楽</div>}
                             </div>
                         </div>
-                    </Rnd>
-                    <Rnd bounds="body" enableResizing="false"
-                    default={{x: 0, y: 240}} nodeRef={nodeRefIcon4}>
+                    </Draggable>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon4}>
                         <div ref={nodeRefIcon4} className="icon" id="desktopIcon" onDoubleClick={() => {
                             setIndexCount((prevValue) => prevValue + 1)
                             setWallpaperIndex(indexCount)
@@ -393,9 +390,8 @@ export default function Desktop() {
                                 {jp && <div className="jpFont">壁紙</div>}
                             </div>
                         </div>
-                    </Rnd>
-                    <Rnd bounds="body" enableResizing="false"
-                    default={{x: 0, y: 360}} nodeRef={nodeRefIcon5}>
+                    </Draggable>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon5}>
                         <div ref={nodeRefIcon5} className="icon" id="desktopIcon" onDoubleClick={() => {
                             setIndexCount((prevValue) => prevValue + 1)
                             setSettingsIndex(indexCount)
@@ -407,9 +403,8 @@ export default function Desktop() {
                                 {jp && <div className="jpFont">設定</div>}
                             </div>
                         </div>
-                    </Rnd>
-                    <Rnd bounds="body" enableResizing="false"
-                    default={{x: 0, y: 480}} nodeRef={nodeRefIcon6}>                    
+                    </Draggable>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon6}>                    
                         <div ref={nodeRefIcon6} className="icon" id="desktopIcon" onDoubleClick={() => window.open('https://www.linkedin.com/in/brandonsharpdesign/', '_blank').focus()}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconLi})`}}></div>
@@ -421,9 +416,8 @@ export default function Desktop() {
                                 {jp && <div className="jpFont">リンクトイン</div>}
                             </div>
                         </div>
-                    </Rnd>
-                    <Rnd bounds="body" enableResizing="false"
-                    default={{x: 0, y: 600}} nodeRef={nodeRefIcon7}>                    
+                    </Draggable>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon7}>                    
                         <div ref={nodeRefIcon7} className="icon" id="desktopIcon" onDoubleClick={() => window.open('https://www.instagram.com/sharp_wit_graphics/', '_blank').focus()}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconIg})`}}></div>
@@ -435,7 +429,7 @@ export default function Desktop() {
                                 {jp && <div className="jpFont">インスタ</div>}
                             </div>
                         </div>
-                    </Rnd>
+                    </Draggable>
                 </div>
                 <div id="modes">
                     <div className="toggleSwitch">
