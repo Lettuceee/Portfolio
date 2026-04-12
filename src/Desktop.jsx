@@ -134,7 +134,6 @@ export default function Desktop() {
             to: '0px',
             from: '100px',
           },
-          opacity: 1,
           ease: 'outCubic',
           duration: 800,
           delay: 1800,
@@ -170,7 +169,6 @@ export default function Desktop() {
         })
 
         animate('#bgLogo', {
-            opacity: 1,
             duration: 1000,
             delay: 4700,
             ease: 'outCubic',
@@ -185,6 +183,14 @@ export default function Desktop() {
                delay: 4800,
             },
         })
+    }
+
+    let isDragging = false;
+    function onDrag() {
+        isDragging = true;
+    }
+    function onStop() {
+        setTimeout(() => (isDragging = false), 0);
     }
           
     useEffect(() => {
@@ -343,11 +349,13 @@ export default function Desktop() {
                     <li></li>
                     </ul>
                 <div className="icons">
-                    <Draggable bounds="body" nodeRef={nodeRefIcon1}>
-                        <div ref={nodeRefIcon1} className="icon" id="desktopIcon" onDoubleClick={() => {
-                            setIndexCount((prevValue) => prevValue + 1)
-                            setInfoIndex(indexCount)
-                            setShowWindowInfo(true)
+                    <Draggable bounds="body" nodeRef={nodeRefIcon1} onStop={onStop} onDrag={onDrag}>
+                        <div ref={nodeRefIcon1} className="icon" id="desktopIcon" onClick={() => {
+                            if(!isDragging){
+                                setIndexCount((prevValue) => prevValue + 1)
+                                setInfoIndex(indexCount)
+                                setShowWindowInfo(true)
+                            }
                         }}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconInfo})`}}></div>
@@ -356,11 +364,13 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon2}>
-                        <div ref={nodeRefIcon2} className="icon" id="desktopIcon" onDoubleClick={() => {
-                            setIndexCount((prevValue) => prevValue + 1)
-                            setProjectsIndex(indexCount)
-                            setShowWindowProjects(true)
+                    <Draggable bounds="body" nodeRef={nodeRefIcon2} onStop={onStop} onDrag={onDrag}>
+                        <div ref={nodeRefIcon2} className="icon" id="desktopIcon" onClick={() => {
+                            if(!isDragging){
+                                setIndexCount((prevValue) => prevValue + 1)
+                                setProjectsIndex(indexCount)
+                                setShowWindowProjects(true)
+                            }
                         }}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconFolder})`}}></div>
@@ -369,7 +379,7 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon3}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon3} onStop={onStop} onDrag={onDrag}>
                         <div ref={nodeRefIcon3} className="icon" id="desktopIcon" style={{display: 'none'}}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconMusic})`}}></div>
@@ -378,11 +388,13 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon4}>
-                        <div ref={nodeRefIcon4} className="icon" id="desktopIcon" onDoubleClick={() => {
-                            setIndexCount((prevValue) => prevValue + 1)
-                            setWallpaperIndex(indexCount)
-                            setShowWindowWallpaper(true)
+                    <Draggable bounds="body" nodeRef={nodeRefIcon4} onStop={onStop} onDrag={onDrag}>
+                        <div ref={nodeRefIcon4} className="icon" id="desktopIcon" onClick={() => {
+                            if(!isDragging){
+                                setIndexCount((prevValue) => prevValue + 1)
+                                setWallpaperIndex(indexCount)
+                                setShowWindowWallpaper(true)
+                            }
                         }}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconWallpaper})`}}></div>
@@ -391,11 +403,13 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon5}>
-                        <div ref={nodeRefIcon5} className="icon" id="desktopIcon" onDoubleClick={() => {
-                            setIndexCount((prevValue) => prevValue + 1)
-                            setSettingsIndex(indexCount)
-                            setShowWindowSettings(true)
+                    <Draggable bounds="body" nodeRef={nodeRefIcon5} onStop={onStop} onDrag={onDrag}>
+                        <div ref={nodeRefIcon5} className="icon" id="desktopIcon" onClick={() => {
+                            if(!isDragging){
+                                setIndexCount((prevValue) => prevValue + 1)
+                                setSettingsIndex(indexCount)
+                                setShowWindowSettings(true)
+                            }
                         }}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconSettings})`}}></div>
@@ -404,8 +418,12 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon6}>                    
-                        <div ref={nodeRefIcon6} className="icon" id="desktopIcon" onDoubleClick={() => window.open('https://www.linkedin.com/in/brandonsharpdesign/', '_blank').focus()}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon6} onStop={onStop} onDrag={onDrag}>                    
+                        <div ref={nodeRefIcon6} className="icon" id="desktopIcon" onClick={() => {
+                            if(!isDragging){
+                                window.open('https://www.linkedin.com/in/brandonsharpdesign/', '_blank').focus()
+                            }
+                        }}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconLi})`}}></div>
                                 <svg id="linkIcon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
@@ -417,8 +435,12 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon7}>                    
-                        <div ref={nodeRefIcon7} className="icon" id="desktopIcon" onDoubleClick={() => window.open('https://www.instagram.com/sharp_wit_graphics/', '_blank').focus()}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon7} onStop={onStop} onDrag={onDrag}>                    
+                        <div ref={nodeRefIcon7} className="icon" id="desktopIcon" onClick={() => {
+                            if(!isDragging){
+                                window.open('https://www.instagram.com/sharp_wit_graphics/', '_blank').focus()
+                            }
+                        }}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconIg})`}}></div>
                                 <svg id="linkIcon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">

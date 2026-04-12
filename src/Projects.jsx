@@ -93,7 +93,7 @@ export default function Projects ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconHager})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setHager175Index(indexCount)
                                         setShowWinHager175(true)
@@ -105,7 +105,7 @@ export default function Projects ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconRide})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setRidefindersIndex(indexCount)
                                         setShowWinRidefinders(true)
@@ -117,7 +117,7 @@ export default function Projects ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconCt})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setCTIndex(indexCount)
                                         setShowWinCT(true)
@@ -129,7 +129,7 @@ export default function Projects ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconSc})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setCitySCIndex(indexCount)
                                         setShowWinCitySC(true)
@@ -141,7 +141,7 @@ export default function Projects ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconDsg})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setDSGIndex(indexCount)
                                         setShowWinDSG(true)
@@ -153,7 +153,7 @@ export default function Projects ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconMay2025})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setMay2025Index(indexCount)
                                         setShowWinMay2025(true)
@@ -165,7 +165,7 @@ export default function Projects ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconHb})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setHBIndex(indexCount)
                                         setShowWinHB(true)
@@ -176,7 +176,8 @@ export default function Projects ({
                             </div>
                             <div className="icon">
                                 <div className="iconImgText">
-                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconCharles})`}}onDoubleClick={() => {
+                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconCharles})`}}
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setCharlesIndex(indexCount)
                                         setShowWinCharles(true)
@@ -187,7 +188,8 @@ export default function Projects ({
                             </div>
                             <div className="icon">
                                 <div className="iconImgText">
-                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconPinnacle})`}}onDoubleClick={() => {
+                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconPinnacle})`}}
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setPinnacleIndex(indexCount)
                                         setShowWinPinnacle(true)
@@ -198,7 +200,8 @@ export default function Projects ({
                             </div>
                             <div className="icon">
                                 <div className="iconImgText">
-                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconHoarding})`}}onDoubleClick={() => {
+                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconHoarding})`}}
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setBannerIndex(indexCount)
                                         setShowWinBanner(true)
@@ -209,7 +212,8 @@ export default function Projects ({
                             </div>
                             <div className="icon">
                                 <div className="iconImgText">
-                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconLira})`}}onDoubleClick={() => {
+                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconLira})`}}
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setBanknotesIndex(indexCount)
                                         setShowWinBanknotes(true)
@@ -220,7 +224,8 @@ export default function Projects ({
                             </div>
                             <div className="icon">
                                 <div className="iconImgText">
-                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconExtras})`}}onDoubleClick={() => {
+                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${IconExtras})`}}
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setExtrasIndex(indexCount)
                                         setShowWinExtras(true)

@@ -205,12 +205,24 @@ h1 {
   }
 }
 
+@keyframes opacityAnimate {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 iframe {
   width: 100%;
   display: block;
   object-fit: fill;
-  height: 20vw;
   border: 0;
+  height: 50vh;
 }
 
 .crt {
@@ -428,7 +440,7 @@ iframe {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  animation: 5s ease-out 0s 1 opacityAnimate;
 }
 
 #bgLogoPreview {
@@ -806,7 +818,7 @@ iframe {
   display: flex;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  animation: 10s ease-out -7.7s 1 opacityAnimate;  
 
   h1 {
     font-size: 4vw;
