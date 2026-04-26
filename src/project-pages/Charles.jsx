@@ -4,7 +4,11 @@ import { useRef } from 'react';
 
 
 export default function Charles ({
-     en, jp, indexCount, setIndexCount, winIndex, setWinIndex, showWin, setShowWin
+     en, jp,
+     defWidth, defX, defY,
+     indexCount, setIndexCount,
+     winIndex, setWinIndex,
+     showWin, setShowWin
 }) {
     const nodeRef = useRef(null);
 
@@ -13,7 +17,7 @@ export default function Charles ({
         <div>
             {showWin &&
                 <Rnd className="window" id="project"
-                minWidth="600px" minHeight="400px" default={{width: 700, height: 600, x: 200, y: 200}}
+                minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {

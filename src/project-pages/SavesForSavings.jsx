@@ -7,7 +7,11 @@ import { useState } from 'react';
 import BurkiArt from '../assets/sfs-burki-art.jpg';
 
 export default function SavesForSavings ({
-    en, jp, indexCount, setIndexCount, winIndex, setWinIndex, showWin, setShowWin
+    en, jp,
+    defWidth, defX, defY,
+    indexCount, setIndexCount,
+    winIndex, setWinIndex,
+    showWin, setShowWin
 }) {
     const nodeRef = useRef(null);
 
@@ -19,7 +23,7 @@ export default function SavesForSavings ({
         <div>
             {showWin &&
                 <Rnd className="window" id="project"
-                minWidth="600px" minHeight="400px" default={{width: 700, height: 600, x: 200, y: 200}}
+                minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
@@ -66,6 +70,9 @@ export default function SavesForSavings ({
                 </Rnd>
                 }
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img1Index}

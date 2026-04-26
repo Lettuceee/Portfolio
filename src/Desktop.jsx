@@ -185,17 +185,28 @@ export default function Desktop() {
         })
     }
 
-    let isDragging = false;
-    function onDrag() {
-        isDragging = true;
-    }
-    function onStop() {
-        setTimeout(() => (isDragging = false), 0);
-    }
+    const [matches, setMatches] = useState(window.matchMedia("(max-width: 600px)").matches)
+    const [defWidth, setDefWidth] = useState(600)
+    const [defWidthProj, setDefWidthProj] = useState(700)
+    const [defX, setDefX] = useState(200)
+    const [defY, setDefY] = useState(200)
           
     useEffect(() => {
 
+            if (matches) {
+                setDefWidth(375)
+                setDefWidthProj(375)
+                setDefX(50)
+                setDefY(50)
+            } else {
+                setDefWidth(600)
+                setDefWidthProj(700)
+                setDefX(200)
+                setDefY(200)
+            }
+
         animeIntro();
+
 
         setInterval(() => {
 
@@ -217,6 +228,25 @@ export default function Desktop() {
             setDate(currentDate)
         }, 1000)    
     }, [])
+
+    /* When open window or icon for that window is clicked, bring that window to top of stack and show window, if not visible */
+    function raiseWindow (setWinIndex, setShowWin) {
+        setIndexCount((prevValue) => prevValue + 1)
+        setWinIndex(indexCount)
+        setShowWin(true)
+    }
+
+    let [dragInfoTime, setDragInfoTime] = useState(0)
+
+    let onDragHandler = (e, data) => {
+        setDragInfoTime(Date.now())
+        console.log(dragInfoTime)
+    }
+
+    let onStopHandler = (e, data) => {
+        if (Date.now() - dragInfoTime < 300) e.srcElement?.click?.()
+    }
+    
 
     return (
 
@@ -349,12 +379,10 @@ export default function Desktop() {
                     <li></li>
                     </ul>
                 <div className="icons">
-                    <Draggable bounds="body" nodeRef={nodeRefIcon1} onStop={onStop} onDrag={onDrag}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon1} onStart={onDragHandler} onStop={onStopHandler}>
                         <div ref={nodeRefIcon1} className="icon" id="desktopIcon" onClick={() => {
-                            if(!isDragging){
-                                setIndexCount((prevValue) => prevValue + 1)
-                                setInfoIndex(indexCount)
-                                setShowWindowInfo(true)
+                            if ((Date.now() - dragInfoTime < 300)) {
+                                raiseWindow(setInfoIndex, setShowWindowInfo)
                             }
                         }}>
                             <div className="iconImgText">
@@ -364,12 +392,10 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon2} onStop={onStop} onDrag={onDrag}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon2} onStop={onStopHandler} onStart={onDragHandler}>
                         <div ref={nodeRefIcon2} className="icon" id="desktopIcon" onClick={() => {
-                            if(!isDragging){
-                                setIndexCount((prevValue) => prevValue + 1)
-                                setProjectsIndex(indexCount)
-                                setShowWindowProjects(true)
+                            if ((Date.now() - dragInfoTime < 300)) {
+                                raiseWindow(setProjectsIndex, setShowWindowProjects)
                             }
                         }}>
                             <div className="iconImgText">
@@ -379,7 +405,7 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon3} onStop={onStop} onDrag={onDrag}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon3} onStop={onStopHandler} onStart={onDragHandler}>
                         <div ref={nodeRefIcon3} className="icon" id="desktopIcon" style={{display: 'none'}}>
                             <div className="iconImgText">
                                 <div className="iconImg" style={{backgroundImage:`url(${IconMusic})`}}></div>
@@ -388,12 +414,10 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon4} onStop={onStop} onDrag={onDrag}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon4} onStop={onStopHandler} onStart={onDragHandler}>
                         <div ref={nodeRefIcon4} className="icon" id="desktopIcon" onClick={() => {
-                            if(!isDragging){
-                                setIndexCount((prevValue) => prevValue + 1)
-                                setWallpaperIndex(indexCount)
-                                setShowWindowWallpaper(true)
+                            if ((Date.now() - dragInfoTime < 300)) {
+                                raiseWindow(setWallpaperIndex, setShowWindowWallpaper)
                             }
                         }}>
                             <div className="iconImgText">
@@ -403,12 +427,10 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon5} onStop={onStop} onDrag={onDrag}>
+                    <Draggable bounds="body" nodeRef={nodeRefIcon5} onStop={onStopHandler} onStart={onDragHandler}>
                         <div ref={nodeRefIcon5} className="icon" id="desktopIcon" onClick={() => {
-                            if(!isDragging){
-                                setIndexCount((prevValue) => prevValue + 1)
-                                setSettingsIndex(indexCount)
-                                setShowWindowSettings(true)
+                            if ((Date.now() - dragInfoTime < 300)) {
+                                raiseWindow(setSettingsIndex, setShowWindowSettings)
                             }
                         }}>
                             <div className="iconImgText">
@@ -418,9 +440,9 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon6} onStop={onStop} onDrag={onDrag}>                    
+                    <Draggable bounds="body" nodeRef={nodeRefIcon6} onStop={onStopHandler} onStart={onDragHandler}>                    
                         <div ref={nodeRefIcon6} className="icon" id="desktopIcon" onClick={() => {
-                            if(!isDragging){
+                            if ((Date.now() - dragInfoTime < 300)) {
                                 window.open('https://www.linkedin.com/in/brandonsharpdesign/', '_blank').focus()
                             }
                         }}>
@@ -435,9 +457,9 @@ export default function Desktop() {
                             </div>
                         </div>
                     </Draggable>
-                    <Draggable bounds="body" nodeRef={nodeRefIcon7} onStop={onStop} onDrag={onDrag}>                    
+                    <Draggable bounds="body" nodeRef={nodeRefIcon7} onStop={onStopHandler} onStart={onDragHandler}>                    
                         <div ref={nodeRefIcon7} className="icon" id="desktopIcon" onClick={() => {
-                            if(!isDragging){
+                            if ((Date.now() - dragInfoTime < 300)) {
                                 window.open('https://www.instagram.com/sharp_wit_graphics/', '_blank').focus()
                             }
                         }}>
@@ -524,6 +546,9 @@ export default function Desktop() {
                     <Info
                         en={en}
                         jp={jp}
+                        defWidth={defWidth}
+                        defX={defX}
+                        defY={defY}
                         indexCount={indexCount}
                         setIndexCount={setIndexCount}
                         infoIndex={infoIndex}
@@ -534,6 +559,9 @@ export default function Desktop() {
                 <Projects
                     en={en}
                     jp={jp}
+                    defWidth={defWidthProj}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     projectsIndex={projectsIndex}
@@ -545,6 +573,9 @@ export default function Desktop() {
                     <Wallpaper
                         en={en}
                         jp={jp}
+                        defWidth={defWidth}
+                        defX={defX}
+                        defY={defY}
                         setPaperStyle={setPaperStyle}
                         setPaperShapesVideoVis={setPaperShapesVideoVis}
                         setPaperHudVideoVis={setPaperHudVideoVis}
@@ -559,6 +590,9 @@ export default function Desktop() {
                 }
                 {showWindowSettings &&
                     <Settings
+                        defWidth={defWidth}
+                        defX={defX}
+                        defY={defY}
                         indexCount={indexCount}
                         setIndexCount={setIndexCount}
                         settingsIndex={settingsIndex}

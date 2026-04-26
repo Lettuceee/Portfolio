@@ -21,7 +21,11 @@ import Vinyl from '../assets/may2025/may2025-vinyl.jpg';
 import Series from '../assets/may2025/may2025-series.jpg';
 
 export default function May2025 ({
-    en, jp,indexCount, setIndexCount, winIndex, setWinIndex, showWin, setShowWin
+    en, jp,
+    defWidth, defX, defY,
+    indexCount, setIndexCount,
+    winIndex, setWinIndex,
+    showWin, setShowWin
 }) {
     const nodeRef = useRef(null);
 
@@ -204,6 +208,9 @@ export default function May2025 ({
                 </Rnd>
                 }
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img1Index}
@@ -214,6 +221,9 @@ export default function May2025 ({
                     imageName={'may2025-wonder.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img2Index}
@@ -224,6 +234,9 @@ export default function May2025 ({
                     imageName={'may2025-dream.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img3Index}
@@ -234,6 +247,9 @@ export default function May2025 ({
                     imageName={'may2025-reflect.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img4Index}
@@ -244,6 +260,9 @@ export default function May2025 ({
                     imageName={'may2025-renew.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img5Index}
@@ -254,6 +273,9 @@ export default function May2025 ({
                     imageName={'sideyard-cloud.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img6Index}
@@ -264,6 +286,9 @@ export default function May2025 ({
                     imageName={'longview-blur.jpg'}
                 />  
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img7Index}
@@ -274,6 +299,9 @@ export default function May2025 ({
                     imageName={'longview-road.jpg'}
                 />  
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img8Index}
@@ -284,6 +312,9 @@ export default function May2025 ({
                     imageName={'texas-sunrise.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img9Index}
@@ -294,6 +325,9 @@ export default function May2025 ({
                     imageName={'may2025-shirt-1.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img10Index}
@@ -304,6 +338,9 @@ export default function May2025 ({
                     imageName={'may2025-tote.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img11Index}
@@ -314,6 +351,9 @@ export default function May2025 ({
                     imageName={'may2025-vinyl.jpg'}
                 />  
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img12Index}
@@ -324,6 +364,9 @@ export default function May2025 ({
                     imageName={'may2025-shirt-2.jpg'}
                 />  
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img13Index}

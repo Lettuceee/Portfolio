@@ -30,7 +30,10 @@ import IconSc from "./icons/icons-projects/icon-sc.png";
 import IconExtras from "./icons/icons-projects/icon-extras.gif";
 
 export default function Projects ({
-    en, jp, indexCount, setIndexCount, showWindowProjects, setShowWindowProjects,
+    en, jp,
+    defWidth, defX, defY,
+    indexCount, setIndexCount,
+    showWindowProjects, setShowWindowProjects,
     projectsIndex, setProjectsIndex
 }) {
     const nodeRefProjects = useRef(null);
@@ -76,7 +79,7 @@ export default function Projects ({
         <div>
             {showWindowProjects &&
                 <Rnd className="window" id="projects"
-                minWidth="200px" minHeight="300px" default={{width: 600, height: 400, x: 200, y: 200}}
+                minWidth="200px" minHeight="300px" default={{width: defWidth, height: 400, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body"
                 noderef={nodeRefProjects} style={{zIndex:`${projectsIndex}`}}
                 onMouseDown={() => {
@@ -241,6 +244,9 @@ export default function Projects ({
                 <Hager175
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={Hager175Index}
@@ -251,6 +257,9 @@ export default function Projects ({
                 <RideFinders
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={RidefindersIndex}
@@ -261,6 +270,9 @@ export default function Projects ({
                 <ConnectTransit
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={CTIndex}
@@ -271,6 +283,9 @@ export default function Projects ({
                 <SavesForSavings
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={CitySCIndex}
@@ -281,6 +296,9 @@ export default function Projects ({
                 <DoSomeGood
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={DSGIndex}
@@ -291,6 +309,9 @@ export default function Projects ({
                 <May2025
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={May2025Index}
@@ -301,6 +322,9 @@ export default function Projects ({
                 <HuschBlackwell
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={HBIndex}
@@ -311,6 +335,9 @@ export default function Projects ({
                 <Charles
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={CharlesIndex}
@@ -321,6 +348,9 @@ export default function Projects ({
                 <Pinnacle
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={PinnacleIndex}
@@ -331,6 +361,9 @@ export default function Projects ({
                 <Banner
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={BannerIndex}
@@ -341,6 +374,9 @@ export default function Projects ({
                 <Banknotes
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={BanknotesIndex}
@@ -351,6 +387,9 @@ export default function Projects ({
                 <Extras
                     en={en}
                     jp={jp}
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={ExtrasIndex}

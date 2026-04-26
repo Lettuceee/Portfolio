@@ -15,7 +15,11 @@ import HagerSocial from '../assets/hager175/hager175-social.jpg';
 import HagerBanners from '../assets/hager175/hager175-banners.jpg';
 
 export default function Hager175 ({
-    en, jp, indexCount, setIndexCount, winIndex, setWinIndex, showWin, setShowWin
+    en, jp,
+    defWidth, defX, defY,
+    indexCount, setIndexCount,
+    winIndex, setWinIndex,
+    showWin, setShowWin
 }) {
     const nodeRef = useRef(null);
 
@@ -43,7 +47,7 @@ export default function Hager175 ({
         <div>
             {showWin &&
                 <Rnd className="window" id="project"
-                minWidth="600px" minHeight="400px" default={{width: 700, height: 600, x: 200, y: 200}}
+                minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
@@ -159,6 +163,9 @@ export default function Hager175 ({
                 </Rnd>
                 }
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img1Index}
@@ -169,6 +176,9 @@ export default function Hager175 ({
                     imageName={'hager175-timeline.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img2Index}
@@ -179,6 +189,9 @@ export default function Hager175 ({
                     imageName={'hager175-booth1.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img3Index}
@@ -189,6 +202,9 @@ export default function Hager175 ({
                     imageName={'hager175-booth2.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img4Index}
@@ -199,6 +215,9 @@ export default function Hager175 ({
                     imageName={'hager175-letterhead.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img5Index}
@@ -209,6 +228,9 @@ export default function Hager175 ({
                     imageName={'hager175-web-mockup.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img6Index}
@@ -219,6 +241,9 @@ export default function Hager175 ({
                     imageName={'hager175-cap.jpg'}
                 />  
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img7Index}
@@ -229,6 +254,9 @@ export default function Hager175 ({
                     imageName={'hager175-polo.jpg'}
                 />  
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img8Index}
@@ -239,6 +267,9 @@ export default function Hager175 ({
                     imageName={'hager175-social.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img9Index}

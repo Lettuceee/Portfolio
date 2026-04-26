@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { Rnd } from 'react-rnd';
 
 export default function Settings({
+    defWidth, defX, defY,
     indexCount, setIndexCount, settingsIndex, setSettingsIndex,
     setMouseClick, setShowWindowSettings, setTaskStyle,
     setCrtVis, setCrtOption, setCrtText,
@@ -22,7 +23,7 @@ export default function Settings({
 
         return (
            <Rnd className="window" id="settings"
-           minWidth="550px" default={{x: 200, y: 200, width: 550, height: 400}}
+           minWidth="300px" default={{x: defX, y: defY, width: defWidth, height: 400}}
            dragHandleClassName="windowheader" bounds="body" enableResizing="false"
            noderef={nodeRefSettings} style={{zIndex:`${settingsIndex}`}}
            onMouseDown={() => {
@@ -129,8 +130,6 @@ export default function Settings({
                         {en && <p><b>Background Squares</b></p>}
                         {jp && <p className="jpFont"><b>背景四角</b></p>}
                         <div className="settingsButtons">
-                            <div className="settingsOption" style={{visibility: "hidden"}}></div>
-                            <div className="settingsOption" style={{visibility: "hidden"}}></div>
                             <div className={`settingsOption ${shapesOn}`} onClick={() => {
                                 setShapesVis("shapesBackground")
                                 setShapesOn("selected")
@@ -154,8 +153,6 @@ export default function Settings({
                         {en && <p><b>Language</b></p>}
                         {jp && <p className="jpFont"><b>言語</b></p>}
                         <div className="settingsButtons">
-                            <div className="settingsOption" style={{visibility: "hidden"}}></div>
-                            <div className="settingsOption" style={{visibility: "hidden"}}></div>
                             <div className={`settingsOption ${enSelected}`} onClick={() => {
                                 setEn(true)
                                 setJp(false)

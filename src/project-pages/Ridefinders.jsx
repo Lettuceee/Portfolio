@@ -14,7 +14,11 @@ import RFPost2 from '../assets/ridefinders/ridefinders-post-2.jpg';
 import RFPost3 from '../assets/ridefinders/ridefinders-post-3.jpg';
 
 export default function RideFinders ({
-    en, jp, indexCount, setIndexCount, winIndex, setWinIndex, showWin, setShowWin
+    en, jp,
+    defWidth, defX, defY,
+    indexCount, setIndexCount,
+    winIndex, setWinIndex,
+    showWin, setShowWin
 }) {
     const nodeRef = useRef(null);
 
@@ -40,7 +44,7 @@ export default function RideFinders ({
         <div>
             {showWin &&
                 <Rnd className="window" id="project"
-                minWidth="600px" minHeight="400px" default={{width: 700, height: 600, x: 200, y: 200}}
+                minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
@@ -135,6 +139,9 @@ export default function RideFinders ({
                 </Rnd>
                 }
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img1Index}
@@ -145,6 +152,9 @@ export default function RideFinders ({
                     imageName={'ridefinders-billboard-1.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img2Index}
@@ -155,6 +165,9 @@ export default function RideFinders ({
                     imageName={'ridefinders-billboard-2.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img3Index}
@@ -165,6 +178,9 @@ export default function RideFinders ({
                     imageName={'ridefinders-billboard-3.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img4Index}
@@ -175,6 +191,9 @@ export default function RideFinders ({
                     imageName={'ridefinders-social.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img5Index}
@@ -185,6 +204,9 @@ export default function RideFinders ({
                     imageName={'ridefinders-infographic.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img6Index}
@@ -195,6 +217,9 @@ export default function RideFinders ({
                     imageName={'ridefinders-post-1.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img7Index}
@@ -205,6 +230,9 @@ export default function RideFinders ({
                     imageName={'ridefinders-post-2.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img8Index}

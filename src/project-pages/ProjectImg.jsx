@@ -3,6 +3,7 @@ import { Rnd } from 'react-rnd';
 import { useRef } from 'react';
 
 export default function ProjectImg ({
+    defWidth, defX, defY,
     indexCount, setIndexCount,
     winIndex, setWinIndex,
     showWin, setShowWin,
@@ -14,7 +15,7 @@ export default function ProjectImg ({
         <div>
             {showWin &&
                 <Rnd className="window" id="imageWindow"
-                minWidth="400px" default={{width: 500, x: 200, y: 200}}
+                minWidth="300px" default={{width: defWidth, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body" lockAspectRatio="true"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {

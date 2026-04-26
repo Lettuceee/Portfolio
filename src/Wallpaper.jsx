@@ -3,15 +3,20 @@ import Logo from './Logo.jsx';
 import { Rnd } from 'react-rnd';
 
 export default function Wallpaper({
-    en, jp, setPaperStyle, setPaperShapesVideoVis, setPaperHudVideoVis, setPaperPortholeVideoVis,
-    indexCount, setIndexCount, wallpaperIndex, setWallpaperIndex, taskStyle,
+    en, jp,
+    defWidth, defX, defY,
+    setPaperStyle, setPaperShapesVideoVis, 
+    setPaperHudVideoVis, setPaperPortholeVideoVis,
+    indexCount, setIndexCount,
+    wallpaperIndex, setWallpaperIndex,
+    taskStyle,
     setShowWindowWallpaper
 }) {
         const nodeRefWallpaper = useRef(null);
 
         return (
            <Rnd className="window" id="wallpaper"
-           minWidth="600px" default={{x: 200, y: 200, width: 600, height: 450}}
+           minWidth="300px" default={{x: defX, y: defY, width: defWidth, height: 450}}
            dragHandleClassName="windowheader" bounds="body" lockAspectRatio="true"
            noderef={nodeRefWallpaper} style={{zIndex:`${wallpaperIndex}`}}
            onMouseDown={() => {

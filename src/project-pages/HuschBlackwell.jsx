@@ -13,7 +13,11 @@ import HBMoveCrew from '../assets/hb/hb-move-crew-tee.jpg';
 import HBRace from '../assets/hb/hb-race-judicata-tee.jpg';
 
 export default function HuschBlackwell ({
-    en, jp, indexCount, setIndexCount, winIndex, setWinIndex, showWin, setShowWin
+    en, jp,
+    defWidth, defX, defY,
+    indexCount, setIndexCount,
+    winIndex, setWinIndex,
+    showWin, setShowWin
 }) {
     const nodeRef = useRef(null);
 
@@ -37,7 +41,7 @@ export default function HuschBlackwell ({
         <div>
             {showWin &&
                 <Rnd className="window" id="project"
-                minWidth="600px" minHeight="400px" default={{width: 700, height: 600, x: 200, y: 200}}
+                minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
@@ -127,6 +131,9 @@ export default function HuschBlackwell ({
                 </Rnd>
                 }
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img1Index}
@@ -137,6 +144,9 @@ export default function HuschBlackwell ({
                     imageName={'hb-gallup-survey-gif'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img2Index}
@@ -147,6 +157,9 @@ export default function HuschBlackwell ({
                     imageName={'hb-kc-charlie-hustle-tee.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img3Index}
@@ -157,6 +170,9 @@ export default function HuschBlackwell ({
                     imageName={'hb-chocolate-sleeve.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img4Index}
@@ -167,6 +183,9 @@ export default function HuschBlackwell ({
                     imageName={'hb-popup-shop-hoodie.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img5Index}
@@ -177,6 +196,9 @@ export default function HuschBlackwell ({
                     imageName={'hb-popup-shop-longsleeve.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img6Index}
@@ -187,6 +209,9 @@ export default function HuschBlackwell ({
                     imageName={'hb-move-crew-tee.jpg'}
                 />  
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img7Index}

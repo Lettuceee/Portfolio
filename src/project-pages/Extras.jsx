@@ -17,7 +17,11 @@ import Gate from "../assets/extras/laser-cut-gate.png";
 import Flygon from "../assets/extras/pokemon-tcg-entry-flygon.jpg";
 
 export default function Extras ({
-    en, jp, indexCount, setIndexCount, winIndex, setWinIndex, showWin, setShowWin
+    en, jp,
+    defWidth, defX, defY,
+    indexCount, setIndexCount, 
+    winIndex, setWinIndex,
+    showWin, setShowWin
 }) {
     const nodeRef = useRef(null);
 
@@ -49,7 +53,7 @@ export default function Extras ({
         <div>
             {showWin &&
                 <Rnd className="window" id="extras"
-                minWidth="200px" minHeight="300px" default={{width: 600, height: 400, x: 200, y: 200}}
+                minWidth="200px" minHeight="300px" default={{width: defWidth, height: 400, x: defX, y: defY}}
                 dragHandleClassName="windowheader" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
@@ -66,7 +70,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${DashiShirt})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg1Index(indexCount)
                                         setShowWinImg1(true)
@@ -77,7 +81,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${Clutter})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg2Index(indexCount)
                                         setShowWinImg2(true)
@@ -88,7 +92,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${ClutterCase})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg3Index(indexCount)
                                         setShowWinImg3(true)
@@ -99,7 +103,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${DonutClock})`}}
-                                        onDoubleClick={() => {
+                                        onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg4Index(indexCount)
                                         setShowWinImg4(true)
@@ -110,7 +114,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${ENJPLE})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg5Index(indexCount)
                                         setShowWinImg5(true)
@@ -121,7 +125,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${VRNihongo})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg6Index(indexCount)
                                         setShowWinImg6(true)
@@ -132,7 +136,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${Radical})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg7Index(indexCount)
                                         setShowWinImg7(true)
@@ -142,7 +146,8 @@ export default function Extras ({
                             </div>
                             <div className="icon">
                                 <div className="iconImgText">
-                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${MeatballSide})`}}onDoubleClick={() => {
+                                    <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${MeatballSide})`}}
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg8Index(indexCount)
                                         setShowWinImg8(true)
@@ -153,7 +158,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${MeatballFront})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg9Index(indexCount)
                                         setShowWinImg9(true)
@@ -164,7 +169,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${Gate})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg10Index(indexCount)
                                         setShowWinImg10(true)
@@ -175,7 +180,7 @@ export default function Extras ({
                             <div className="icon">
                                 <div className="iconImgText">
                                     <div className="iconImg" id="projectIcon" style={{backgroundImage:`url(${Flygon})`}}
-                                    onDoubleClick={() => {
+                                    onClick={() => {
                                         setIndexCount((prevValue) => prevValue + 1)
                                         setImg11Index(indexCount)
                                         setShowWinImg11(true)
@@ -188,6 +193,9 @@ export default function Extras ({
                 </Rnd>
                 }
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img1Index}
@@ -198,6 +206,9 @@ export default function Extras ({
                     imageName={'2025-stltaiko-dashi-shirt.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img2Index}
@@ -208,6 +219,9 @@ export default function Extras ({
                     imageName={'cluttered-mind-cassette.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img3Index}
@@ -218,6 +232,9 @@ export default function Extras ({
                     imageName={'cluttered-mind-cassette-mockup.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img4Index}
@@ -228,6 +245,9 @@ export default function Extras ({
                     imageName={'donut-o-clock.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img5Index}
@@ -238,6 +258,9 @@ export default function Extras ({
                     imageName={'enjple-poster.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img6Index}
@@ -248,6 +271,9 @@ export default function Extras ({
                     imageName={'vr-nihongo-poster.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img7Index}
@@ -258,6 +284,9 @@ export default function Extras ({
                     imageName={'radical-refresh-flavors.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img8Index}
@@ -268,6 +297,9 @@ export default function Extras ({
                     imageName={'rolling-meatball-side.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img9Index}
@@ -278,6 +310,9 @@ export default function Extras ({
                     imageName={'rolling-meatball-front.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img10Index}
@@ -288,6 +323,9 @@ export default function Extras ({
                     imageName={'laser-cut-gate.jpg'}
                 />
                 <ProjectImg
+                    defWidth={defWidth}
+                    defX={defX}
+                    defY={defY}
                     indexCount={indexCount}
                     setIndexCount={setIndexCount}
                     winIndex={img11Index}

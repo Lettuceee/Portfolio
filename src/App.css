@@ -244,19 +244,59 @@ iframe {
 
 .paperSelect {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
   padding: 5%;
-  height: 90%;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 100%;
 }
 
+@media (max-width: 600px) {
+  .paperSelect {
+    grid-template-columns: 50% 50%;
+    height: 200%;
+  }
+
+  .wallpaper#burki, .paperPreview#burki {
+    background-position-x: 60%;
+  }
+
+  .settingsRow {
+    display: block;
+    text-align: center;
+    p {
+      padding-bottom: 5px;
+    }
+  }
+  .settingsOption {
+    height: 35px;
+  }
+
+  .settingsDivider {
+    margin-bottom: 6px;
+  }
+  .settingsButtons {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .settingsRow {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    text-align: left;
+  }
+  .settingsDivider {
+     margin-bottom: 12px;
+  }
+  .settingsButtons {
+    justify-content: right;
+  }
+}
+
+
 .settingsRow {
-  display: grid;
-  grid-template-columns: 35% 65%;
   padding-right: 5%;
   padding-left: 5%;
-  height: 35px;
-  text-align: left;
-
+ 
   p {
     margin-left: 8px;
     margin-block-start: 7px;
@@ -270,12 +310,11 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   margin-top: 13px;
-  margin-bottom: 12px;
 }
 
 .settingsButtons {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+   grid-template-columns: repeat(auto-fit, minmax(25%, max-content));
 }
 
 .modeButton.selected {
@@ -410,7 +449,7 @@ iframe {
 .wallpaper#burki, .paperPreview#burki{
   background-image: url("./wallpaper/burki-art.png");
   background-size: cover;
-  background-position-x: 100%;
+  background-position-x: 60%;
 }
 
 .light li, .twilight li, .retro li {
@@ -444,11 +483,11 @@ iframe {
 }
 
 #bgLogoPreview {
-  position: absolute;
   display: flex;
-  width: 14%;
+  height: 100%;
+  width: 50%;
   align-content: center;
-  transform: translate(14%, 135%);
+  transform: translate(50%, 0);
 }
 
 .window {
@@ -520,6 +559,7 @@ iframe {
   top: 20px;
   left: 10px;
   height: calc(100% - 30px);
+  overflow-y: auto;
 }
 
 .iconImgText {
@@ -994,7 +1034,6 @@ iframe {
     width: 100%;
   }
   .windowContent {
-    overflow-y: auto;
     p {
       margin-block-end: 20px;
     }

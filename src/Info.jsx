@@ -5,13 +5,13 @@ import IconBrandon from "./assets/DSC01481-circle.png";
 import IconLettuce from "./assets/lettuce-icon.png";
 
 export default function Info({
-    en, jp, indexCount, setIndexCount, setShowWindowInfo, infoIndex, setInfoIndex
+    en, jp, defWidth, defX, defY, indexCount, setIndexCount, setShowWindowInfo, infoIndex, setInfoIndex
 }) {
     const nodeRefInfo = useRef(null);
 
     return (
         <Rnd className="window" id="info"
-        minWidth="450px" minHeight="300px" default={{width: 420, height: 500, x: 200, y: 200}}
+        minWidth="300px" minHeight="300px" default={{width: defWidth, height: 500, x: defX, y: defY}}
         dragHandleClassName="windowheader" bounds="body"
         noderef={nodeRefInfo} style={{zIndex:`${infoIndex}`}}
         onMouseDown={() => {
