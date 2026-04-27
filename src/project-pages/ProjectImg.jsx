@@ -16,7 +16,7 @@ export default function ProjectImg ({
             {showWin &&
                 <Rnd className="window" id="imageWindow"
                 minWidth="300px" default={{width: defWidth, x: defX, y: defY}}
-                dragHandleClassName="windowheader" bounds="body" lockAspectRatio="true"
+                dragHandleClassName="windowDrag" bounds="body" lockAspectRatio="true"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
                         setIndexCount((prevValue) => prevValue + 1)
@@ -24,6 +24,7 @@ export default function ProjectImg ({
                     }}>
                         <div className="windowheader">
                             <p>{imageName}</p>
+                            <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWin(false)}></div>
                         </div>
                     <div className="windowContent">

@@ -24,7 +24,7 @@ export default function Settings({
         return (
            <Rnd className="window" id="settings"
            minWidth="300px" default={{x: defX, y: defY, width: defWidth, height: 400}}
-           dragHandleClassName="windowheader" bounds="body" enableResizing="false"
+           dragHandleClassName="windowDrag" bounds="body" enableResizing="false"
            noderef={nodeRefSettings} style={{zIndex:`${settingsIndex}`}}
            onMouseDown={() => {
                     setIndexCount((prevValue) => prevValue + 1)
@@ -33,6 +33,7 @@ export default function Settings({
                 <div className="windowheader">
                     {en && <p>Settings</p>}
                     {jp && <p className="jpFont">設定</p>}
+                    <div className="windowDrag"></div>
                     <div className="close" onClick={() => setShowWindowSettings(false)}></div>
                 </div>
                 <div className="windowContent" id="settingsContent">

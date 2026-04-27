@@ -222,7 +222,7 @@ iframe {
   display: block;
   object-fit: fill;
   border: 0;
-  height: 50vh;
+  height: 480px;
 }
 
 .crt {
@@ -276,6 +276,9 @@ iframe {
   .settingsButtons {
     justify-content: center;
   }
+  #settingsContent {
+    padding-top: 10px
+  }
 }
 
 @media (min-width: 600px) {
@@ -289,6 +292,12 @@ iframe {
   }
   .settingsButtons {
     justify-content: right;
+  }
+  .settingsOption {
+    height: 35px;
+  }
+  #settingsContent {
+    padding-top: 20px
   }
 }
 
@@ -349,7 +358,6 @@ iframe {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 20px;
 }
 
 .settingsOption {
@@ -510,6 +518,13 @@ iframe {
   box-shadow: 10px 10px #000000;
 }
 
+.windowDrag {
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 32px);
+}
 
 .windowheader {
   padding-left: 5px;

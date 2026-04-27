@@ -42,7 +42,7 @@ export default function HuschBlackwell ({
             {showWin &&
                 <Rnd className="window" id="project"
                 minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
-                dragHandleClassName="windowheader" bounds="body"
+                dragHandleClassName="windowDrag" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
                         setIndexCount((prevValue) => prevValue + 1)
@@ -51,7 +51,7 @@ export default function HuschBlackwell ({
                         <div className="windowheader">
                             {en && <p>Husch Blackwell</p>}
                             {jp && <p className="jpFont">ハッシュ・ブラックウェル</p>}
-
+                            <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWin(false)}></div>
                         </div>
                     <div className="windowContent">

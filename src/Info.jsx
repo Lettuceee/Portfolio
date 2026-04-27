@@ -12,7 +12,7 @@ export default function Info({
     return (
         <Rnd className="window" id="info"
         minWidth="300px" minHeight="300px" default={{width: defWidth, height: 500, x: defX, y: defY}}
-        dragHandleClassName="windowheader" bounds="body"
+        dragHandleClassName="windowDrag" bounds="body"
         noderef={nodeRefInfo} style={{zIndex:`${infoIndex}`}}
         onMouseDown={() => {
             setIndexCount((prevValue) => prevValue + 1)
@@ -21,6 +21,7 @@ export default function Info({
             <div className="windowheader">
                 {en && <p>Info/Email</p>}
                 {jp && <p className="jpFont">情報・連絡</p>}
+                <div className="windowDrag"></div>
                 <div className="close" onClick={() => setShowWindowInfo(false)}></div>
             </div>
             <div className="windowContent">

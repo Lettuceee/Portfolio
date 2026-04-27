@@ -36,7 +36,7 @@ export default function Banknotes ({
             {showWin &&
                 <Rnd className="window" id="project"
                 minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
-                dragHandleClassName="windowheader" bounds="body"
+                dragHandleClassName="windowDrag" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
                         setIndexCount((prevValue) => prevValue + 1)
@@ -45,6 +45,7 @@ export default function Banknotes ({
                         <div className="windowheader">
                             {en && <p>Vatican Lira Banknote Concept</p>}
                             {jp && <p className="jpFont">バチカン・リラ札コンセプト</p>}
+                            <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWin(false)}></div>
                         </div>
                     <div className="windowContent">

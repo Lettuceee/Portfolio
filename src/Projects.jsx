@@ -80,7 +80,7 @@ export default function Projects ({
             {showWindowProjects &&
                 <Rnd className="window" id="projects"
                 minWidth="200px" minHeight="300px" default={{width: defWidth, height: 400, x: defX, y: defY}}
-                dragHandleClassName="windowheader" bounds="body"
+                dragHandleClassName="windowDrag" bounds="body"
                 noderef={nodeRefProjects} style={{zIndex:`${projectsIndex}`}}
                 onMouseDown={() => {
                         setIndexCount((prevValue) => prevValue + 1)
@@ -89,6 +89,7 @@ export default function Projects ({
                         <div className="windowheader">
                             {en &&<p>Projects</p>}
                             {jp &&<p className="jpFont">プロジェクト</p>}
+                            <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWindowProjects(false)}></div>
                         </div>
                     <div className="windowContent">

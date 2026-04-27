@@ -48,7 +48,7 @@ export default function Hager175 ({
             {showWin &&
                 <Rnd className="window" id="project"
                 minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
-                dragHandleClassName="windowheader" bounds="body"
+                dragHandleClassName="windowDrag" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
                         setIndexCount((prevValue) => prevValue + 1)
@@ -57,6 +57,7 @@ export default function Hager175 ({
                         <div className="windowheader">
                             {en && <p>Hager Companies 175th</p>}
                             {jp && <p className="jpFont">ハーガー・カンパニーズ 175周年</p>}
+                            <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWin(false)}></div>
                         </div>
                     <div className="windowContent">
@@ -66,7 +67,7 @@ export default function Hager175 ({
                                 {jp && <h1 className="jpFontHeader">ハーガー・カンパニーズ 175周年</h1>}
                             </div>
                             <div className="containerVideo">
-                                <iframe src="https://player.vimeo.com/video/1021838016?autoplay=1&amp;loop=1&amp;h=049cd3041e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1" allow="autoplay; picture-in-picture" className="embed-content" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+                                <iframe src="https://player.vimeo.com/video/1021838016?autoplay=1&amp;loop=1&amp;h=049cd3041e&amp;badge=0&amp;controls=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;muted=1" allow="autoplay; picture-in-picture" className="embed-content" style={{display: 'block', width: '100%', height: '8vw'}} sandbox="allow-presentation allow-same-origin allow-scripts allow-pointer-lock allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
                             </div>
                             {en && <div>
                                 <p>In 1849, Charles Hager started his own business in St. Louis, crafting wagon wheel rims 

@@ -64,7 +64,7 @@ export default function May2025 ({
             {showWin &&
                 <Rnd className="window" id="project"
                 minWidth="600px" minHeight="400px" default={{width: 700, height: 600, x: 200, y: 200}}
-                dragHandleClassName="windowheader" bounds="body"
+                dragHandleClassName="windowDrag" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
                         setIndexCount((prevValue) => prevValue + 1)
@@ -73,7 +73,7 @@ export default function May2025 ({
                         <div className="windowheader">
                             {en && <p>May2025 Poster Series</p>}
                             {jp && <p className="jpFont">May2025 ポスターシリーズ</p>}
-
+                            <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWin(false)}></div>
                         </div>
                     <div className="windowContent">

@@ -17,7 +17,7 @@ export default function Wallpaper({
         return (
            <Rnd className="window" id="wallpaper"
            minWidth="300px" default={{x: defX, y: defY, width: defWidth, height: 450}}
-           dragHandleClassName="windowheader" bounds="body" lockAspectRatio="true"
+           dragHandleClassName="windowDrag" bounds="body" lockAspectRatio="true"
            noderef={nodeRefWallpaper} style={{zIndex:`${wallpaperIndex}`}}
            onMouseDown={() => {
                     setIndexCount((prevValue) => prevValue + 1)
@@ -26,6 +26,7 @@ export default function Wallpaper({
                 <div className="windowheader">
                     {en && <p>Wallpaper</p>}
                     {jp && <p className="jpFont">壁紙</p>}
+                    <div className="windowDrag"></div>
                     <div className="close" onClick={() => setShowWindowWallpaper(false)}></div>
                 </div>
                 <div className="windowContent">

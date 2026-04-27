@@ -54,7 +54,7 @@ export default function Extras ({
             {showWin &&
                 <Rnd className="window" id="extras"
                 minWidth="200px" minHeight="300px" default={{width: defWidth, height: 400, x: defX, y: defY}}
-                dragHandleClassName="windowheader" bounds="body"
+                dragHandleClassName="windowDrag" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
                         setIndexCount((prevValue) => prevValue + 1)
@@ -63,6 +63,7 @@ export default function Extras ({
                         <div className="windowheader">
                             {en &&<p>Extras</p>}
                             {jp &&<p>エクストラ</p>}
+                            <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWin(false)}></div>
                         </div>
                     <div className="windowContent">
