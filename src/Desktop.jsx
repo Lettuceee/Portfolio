@@ -194,8 +194,8 @@ export default function Desktop() {
     useEffect(() => {
 
             if (matches) {
-                setDefWidth(300)
-                setDefWidthProj(300 )
+                setDefWidth(360)
+                setDefWidthProj(360)
                 setDefX(50)
                 setDefY(50)
             } else {
@@ -287,17 +287,17 @@ export default function Desktop() {
                 </div>
                 <div className="wallpaper" id={paperStyle}></div>
                 {paperShapesVideoVis &&
-                    <video autoPlay loop muted playsinline className="paperVideo">
+                    <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
                         <source src={paperShapesVideo} type="video/mp4" />
                     </video>
                 }
                 {paperHudVideoVis &&
-                    <video autoPlay loop muted playsinline className="paperVideo">
+                    <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
                         <source src={paperHudVideo} type="video/mp4" />
                     </video>
                 }
                 {paperPortholeVideoVis &&
-                    <video autoPlay loop muted playsinline className="paperVideo">
+                    <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
                         <source src={paperPortholeVideo} type="video/mp4" />
                     </video>
                 }

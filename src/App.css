@@ -532,6 +532,7 @@ iframe {
   align-content: center;
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
   display: grid;
   grid-template-columns: auto 32px;
   cursor: move;
@@ -1209,10 +1210,10 @@ svg {
 }
 
 #intro {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container4col {
