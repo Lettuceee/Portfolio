@@ -63,7 +63,7 @@ export default function May2025 ({
         <div>
             {showWin &&
                 <Rnd className="window" id="project"
-                minWidth="600px" minHeight="400px" default={{width: 700, height: 600, x: 200, y: 200}}
+                minWidth="300px" minHeight="400px" default={{width: defWidth, height: 600, x: defX, y: defY}}
                 dragHandleClassName="windowDrag" bounds="body"
                 noderef={nodeRef} style={{zIndex:`${winIndex}`}}
                 onMouseDown={() => {
