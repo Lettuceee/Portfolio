@@ -5,6 +5,7 @@ import { Rnd } from 'react-rnd';
 export default function Wallpaper({
     en, jp,
     defWidth, defX, defY,
+    matches,
     setPaperStyle, setPaperShapesVideoVis, 
     setPaperHudVideoVis, setPaperPortholeVideoVis,
     indexCount, setIndexCount,
@@ -45,36 +46,42 @@ export default function Wallpaper({
                         {en && <div>Default</div>}
                         {jp && <div className="jpFont">デフォルト</div>}
                         </div>
-                        <div className="paperOption">
-                            <div className="paperPreview" id="shapesPreview" onClick={() => {
-                                setPaperStyle("shapesPreview")
-                                setPaperShapesVideoVis(true)
-                                setPaperHudVideoVis(false)
-                                setPaperPortholeVideoVis(false)
-                            }}></div>
-                            {en && <div>▶ Shapes</div>}
-                            {jp && <div className="jpFont">▶ シェイプ</div>}
-                        </div>
-                        <div className="paperOption">
-                            <div className="paperPreview" id="hudPreview" onClick={() => {
-                                setPaperStyle("hudPreview")
-                                setPaperHudVideoVis(true)
-                                setPaperShapesVideoVis(false)
-                                setPaperPortholeVideoVis(false)
-                            }}></div>
-                            {en && <div>▶ Hologram</div>}
-                            {jp && <div className="jpFont">▶ ホログラム</div>}
-                        </div>
-                        <div className="paperOption">
-                            <div className="paperPreview" id="portholePreview" onClick={() => {
-                                setPaperStyle("portholePreview")
-                                setPaperPortholeVideoVis(true)
-                                setPaperShapesVideoVis(false)
-                                setPaperHudVideoVis(false)
-                            }}></div>
-                            {en && <div>▶ Porthole</div>}
-                            {jp && <div className="jpFont">▶ ポルチオール</div>}
-                        </div>
+                        {!matches &&
+                            <div className="paperOption">
+                                <div className="paperPreview" id="shapesPreview" onClick={() => {
+                                    setPaperStyle("shapesPreview")
+                                    setPaperShapesVideoVis(true)
+                                    setPaperHudVideoVis(false)
+                                    setPaperPortholeVideoVis(false)
+                                }}></div>
+                                {en && <div>▶ Shapes</div>}
+                                {jp && <div className="jpFont">▶ シェイプ</div>}
+                            </div>
+                        }
+                        {!matches &&
+                            <div className="paperOption">
+                                <div className="paperPreview" id="hudPreview" onClick={() => {
+                                    setPaperStyle("hudPreview")
+                                    setPaperHudVideoVis(true)
+                                    setPaperShapesVideoVis(false)
+                                    setPaperPortholeVideoVis(false)
+                                }}></div>
+                                {en && <div>▶ Hologram</div>}
+                                {jp && <div className="jpFont">▶ ホログラム</div>}
+                            </div>
+                        }
+                        {!matches &&
+                            <div className="paperOption">
+                                <div className="paperPreview" id="portholePreview" onClick={() => {
+                                    setPaperStyle("portholePreview")
+                                    setPaperPortholeVideoVis(true)
+                                    setPaperShapesVideoVis(false)
+                                    setPaperHudVideoVis(false)
+                                }}></div>
+                                {en && <div>▶ Porthole</div>}
+                                {jp && <div className="jpFont">▶ ポルチオール</div>}
+                            </div>
+                        }
                         <div className="paperOption">
                             <div className="paperPreview" id="underpass" onClick={() => {
                                 setPaperShapesVideoVis(false)

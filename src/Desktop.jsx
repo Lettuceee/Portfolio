@@ -286,20 +286,24 @@ export default function Desktop() {
                     <Logo logoViewbox={"0 0 1777.39 405.84"}/>
                 </div>
                 <div className="wallpaper" id={paperStyle}></div>
-                {paperShapesVideoVis &&
-                    <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
-                        <source src={paperShapesVideo} type="video/mp4" />
-                    </video>
-                }
-                {paperHudVideoVis &&
-                    <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
-                        <source src={paperHudVideo} type="video/mp4" />
-                    </video>
-                }
-                {paperPortholeVideoVis &&
-                    <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
-                        <source src={paperPortholeVideo} type="video/mp4" />
-                    </video>
+                {!matches &&
+                        <div>
+                        {paperShapesVideoVis &&
+                            <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
+                                <source src={paperShapesVideo} type="video/mp4" />
+                            </video>
+                        }
+                        {paperHudVideoVis &&
+                            <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
+                                <source src={paperHudVideo} type="video/mp4" />
+                            </video>
+                        }
+                        {paperPortholeVideoVis &&
+                            <video autoPlay loop muted webkit-playsinline playsinline className="paperVideo">
+                                <source src={paperPortholeVideo} type="video/mp4" />
+                            </video>
+                        }
+                    </div>
                 }
                 <div id="intro">
                     <div className="introContainer">
@@ -576,6 +580,7 @@ export default function Desktop() {
                         defWidth={defWidth}
                         defX={defX}
                         defY={defY}
+                        matches={matches}
                         setPaperStyle={setPaperStyle}
                         setPaperShapesVideoVis={setPaperShapesVideoVis}
                         setPaperHudVideoVis={setPaperHudVideoVis}

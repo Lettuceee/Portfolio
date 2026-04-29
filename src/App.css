@@ -279,6 +279,64 @@ iframe {
   #settingsContent {
     padding-top: 10px
   }
+
+  .shapesBackground li:nth-child(0) {
+    width: 10vw;
+    height: 10vw;
+    bottom: -10vw;
+  }
+  .shapesBackground li:nth-child(1) {
+      width: 9.6vw;
+      height: 9.6vw;
+      bottom: -9.6vw;
+  }
+  .shapesBackground li:nth-child(2) {
+      width: 6.6vw;
+      height: 6.6vw;
+      bottom: -6.6vw;
+  }
+  .shapesBackground li:nth-child(3) {
+      width: 9.2vw;
+      height: 9.2vw;
+      bottom: -9.2vw;
+  }
+  .shapesBackground li:nth-child(4) {
+      width: 8vw;
+      height: 8vw;
+      bottom: -8vw;
+  }
+  .shapesBackground li:nth-child(5) {
+      width: 5.6vw;
+      height: 5.6vw;
+      bottom: -5.6vw;
+  }
+  .shapesBackground li:nth-child(6) {
+      width: 8vw;
+      height: 8vw;
+      bottom: -8vw;
+  }
+  .shapesBackground li:nth-child(7) {
+      width: 7vw;
+      height: 7vw;
+      bottom: -7vw;
+  }
+  .shapesBackground li:nth-child(8) {
+      width: 8vw;
+      height: 8vw;
+      bottom: -8vw;
+  }
+  .shapesBackground li:nth-child(9) {
+      width: 9.8vw;
+      height: 9.8vw;
+      bottom: -9.8vw;
+  }
+
+  .launching {
+    h1 {
+      font-size: 5vw;
+      letter-spacing: 2px;
+    }
+  }
 }
 
 @media (min-width: 600px) {
@@ -286,6 +344,7 @@ iframe {
     display: grid;
     grid-template-columns: 35% 65%;
     text-align: left;
+    margin-left: 8px;
   }
   .settingsDivider {
      margin-bottom: 12px;
@@ -299,6 +358,12 @@ iframe {
   #settingsContent {
     padding-top: 20px
   }
+  .launching {
+    h1 {
+      font-size: 4vw;
+      letter-spacing: 3px;
+    }
+  }
 }
 
 
@@ -307,7 +372,6 @@ iframe {
   padding-left: 5%;
  
   p {
-    margin-left: 8px;
     margin-block-start: 7px;
     margin-block-end: 0px;
   }
@@ -415,12 +479,13 @@ iframe {
 .wallpaper#sunset, .paperPreview#sunset{
   background-image: url("./wallpaper/sunset.jpeg");
   background-size: cover;
-  background-position-x: 50%;
+  background-position-x: 38%;
 }
 .wallpaper#underpass, .paperPreview#underpass{
   background-image: url("./wallpaper/underpass.jpg");
   background-size: cover;
-  background-position-y: 50%;
+  background-position-x: 37%;
+  background-position-y: 55%;
 }
 .wallpaper#enjp5, .paperPreview#enjp5{
   background-image: url("./wallpaper/enjp5.png");
@@ -430,6 +495,7 @@ iframe {
 .wallpaper#pigeons, .paperPreview#pigeons{
   background-image: url("./wallpaper/pigeons.jpg");
   background-size: cover;
+  background-position-x: 50%;
   background-position-y: 50%;
 }
 .wallpaper#dogs, .paperPreview#dogs{
@@ -451,8 +517,8 @@ iframe {
 .wallpaper#img8461, .paperPreview#img8461{
   background-image: url("./wallpaper/IMG_8461.jpg");
   background-size: cover;
-  background-position-y: 40%;
   background-position-x: 50%;
+  background-position-y: 40%;
 }
 .wallpaper#burki, .paperPreview#burki{
   background-image: url("./wallpaper/burki-art.png");
@@ -877,8 +943,6 @@ iframe {
   animation: 10s ease-out -7.7s 1 opacityAnimate;  
 
   h1 {
-    font-size: 4vw;
-    letter-spacing: 3px;
     margin: auto;
     top: 80%;
     font-weight: normal;
