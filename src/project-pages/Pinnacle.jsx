@@ -50,7 +50,7 @@ export default function Pinnacle ({
                     }}>
                         <div className="windowheader">
                             {en && <p>ASID Pinnacle Awards 2023</p>}
-                            {jp && <p className="jpFont">ASID ピナクル賞 2023</p>}\
+                            {jp && <p className="jpFont">ASID ピナクル賞 2023</p>}
                             <div className="windowDrag"></div>
                             <div className="close" onClick={() => setShowWin(false)}></div>
                         </div>

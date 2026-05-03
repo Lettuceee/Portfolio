@@ -52,12 +52,12 @@ export default function Info({
                     </div>}
                     {jp && <div className="jpFont">
                         <p>ミズーリ州のセントルイス市に拠点、マルチディシプリナリーデザイナーのシャープ・ブランドンです！
-                            グラフィックデザイン、モーションメディア、ビデオ、3Dモデリングなど、プロジェクトが人目を引き
-                            楽しませるのを目指してます。結局、目標はみんなが笑顔を！</p>
+                            グラフィックデザイン、モーションメディア、ビデオ、3Dモデリングなど、プロジェクトが人目を引き楽しませるのを目指してます。
+                            結局、目標はみんなが笑顔を！</p>
                         <p>仕事をしてないとき、ピアノを弾いたり、ポケモンGOで色違いポケモンを探したり、自分のプロジェクトをしたり、
                             VRChatで日本語を練習したりしてます。</p>
-                        <p><a href="https://poolsuite.net/" target="_blank">Poolsuite</a>と<a href="https://store.steampowered.com/app/844590/Hypnospace_Outlaw/" target="_blank">Hypnospace Outlaw</a>などのデスクトップ環境の
-                        ウェブサイトやゲームにいつもめっちゃ興味があって、結局ポートフォリオであり、デスクトッププレイグラウンドでもあるサイトを作りたかったんです。
+                        <p><a href="https://poolsuite.net/" target="_blank">Poolsuite</a>と<a href="https://store.steampowered.com/app/844590/Hypnospace_Outlaw/" target="_blank">Hypnospace Outlaw</a>などのデスクトップ環境のウェブサイトやゲームにいつもめっちゃ興味があって、
+                        結局ポートフォリオであり、デスクトッププレイグラウンドでもあるサイトを作りたかったんです。
                             <b>アイコンをドラッグしよう！ウィンドウをリサイズしよう！壁紙を変えよう！</b>なんでも自由に！</p>
                         <p>このサイトはViteのツールを使って、完全にReactJSで作成された。自分のウェブサイトを作ろうとしている場合は、
                             ぜひソースコードを見よう！</p>
